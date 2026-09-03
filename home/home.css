@@ -1,5 +1,3 @@
-/* CABEÇALHO */
-
 a {
     color: var(--branco);
     text-decoration: none;
@@ -9,9 +7,9 @@ a {
     background-color: var(--azul-escuro);
 
     display: flex;
-    /* flex-direction: row; */
-    /* por padrão o flex vem na direção row/linha*/
+    /* POR PADRÃO O FLEX VEM NA DIREÇÃO ROW/LINHA, então não precisa do flex direction */
 
+    /* alinha n sentido do flex */
     justify-content: space-between;
 
     /* alinha no sentido contrário do flex */
@@ -19,7 +17,7 @@ a {
 
     padding: 0 120px;
 
-    height: 10vh
+    height: 10vh;
 }
 
 .navegacao {
@@ -32,32 +30,34 @@ a {
 .navegacao a {
     text-transform: uppercase;
 
-    /*1rem -> equivale a 16px (padrão da raíz do HTML) */
-    /* em -> pega o tamanho da tipografia */
-    font-size: 1em; 
+    /* 1rem -> equivale a 16px (padrão da raiz do HTML) */
+    /* 1em -> pega o tamanho da tipografia do elemento pai */
+    font-size: 1em;
     font-weight: 500;
+
 }
 
 /* CONTEÚDO PRINCIPAL */
 
-/* Primero banner */
+
+/* Primeiro banner */
 
 .banner-principal {
     color: var(--branco);
 
-height: 70vh;
-background-image: url(../imgs/banner-principal-home.png);
-background-size: cover;
+    height: 70vh;
 
-/* background-repeat: no-repeat; */
+    background-image: url(../imgs/banner-principal-home.png);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
 
-/* overflow: hidden; evita que os elementos transbordem */
+    /* overflow: hidden; evita que os elementos transbordem */
 
-display: flex;
-align-items: center;
-justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-padding: 0 120px;
+    padding: 0 120px;
 }
 
 .texto-banner {
@@ -74,7 +74,6 @@ padding: 0 120px;
 .texto-banner p {
     font-size: 1.5em;
     width: 50%;
-
 }
 
 .botao {
@@ -87,14 +86,146 @@ padding: 0 120px;
 
     font-size: 1.2em;
     font-weight: 700;
+
+    text-transform: uppercase;
 }
 
 .botao:hover {
-    background-color: #155c58;
-    color: var(--branco)
+    background-color: #2ca7a0;
+    color: var(--branco);
 }
 
 .banner-principal img {
     align-self: flex-end;
     width: 35%;
+}
+
+/* Titulo das seções */
+
+.titulo-secao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-secao h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.titulo-secao span {
+    display: flex;
+    width: 250px;
+    height: 4px;
+    background-color: var(--cor-destaque);
+}
+
+/* Seção Benefícios */
+
+.beneficios {
+    padding: 50px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 100px;
+}
+
+.beneficios-lista {
+    display: grid;
+
+    grid-template-columns: repeat(3, 20%);
+
+    gap: 10%;
+
+    justify-content: center;
+}
+
+.beneficio {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 20px 50px;
+    /* em cima -> direita e esquerda -> embaixo */
+
+    border: 1px solid var(--azul-escuro);
+    border-radius: 30px;
+    box-shadow: 5px 5px 30 px rgba(0, 0, 0, 0.25);
+    /* x -> y -> blur(desfoque) -> cor com transparência */
+
+    text-align: center;
+
+    /* Cria referência de posicionamento para o ícone, quando o ícone for posicionado, usa 
+    esse card como referência */
+    /* sem isso, o circulo poderia usar outro elemento da página como referência e sair
+    passeando pelo layout. */
+    position: relative;
+}
+
+.beneficio-icone img {
+    width: 50%;
+}
+
+.beneficio-icone {
+    border: 4px solid var(--cor-destaque);
+    background-color: var(--branco);
+
+    border-radius: 50%;
+
+    width: 30%;
+    height: 30%;
+
+    /* Retira o ícone do fluxo normal, com o absolute ele pode ficar por cima do card */
+    position: absolute;
+
+    /* Move o elemento pra cima, o valor negativo faz ele sair parcialmente do card */
+    top: -15%;
+
+    /* Coloca o começo elemento em 50% da largura do card */
+    left: 50%;
+
+    /* ajustamos o posicionamento do elemento, mas a borda esquerda do círculo fica no centro, não 
+    o circulo inteiro*/
+    transform: translateX(-50%);
+
+    display: grid;
+
+    /*place-items: center; é a mesma coisa que colocar:
+        align-items: center; e justify-items: center; */
+
+    place-items: center;
+}
+
+.beneficio-icone {
+
+}
+
+.beneficio h3 {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    width: 90%;
+}
+
+.beneficio p {
+    font-size: 1em;
+    width: 80;
+}
+
+/* Banner meio */
+
+.banner-meio {
+    height: 60vh;
+
+    background-image: url(../imgs/Banner\ centro.svg);
+    background-size: cover;
+
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 0 120px;
 }
