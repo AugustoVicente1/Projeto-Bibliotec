@@ -1,4 +1,4 @@
-/* Main */
+/* main */
 
 .conteudo {
     background-image: url(../imgs/banner-login.png);
@@ -11,6 +11,8 @@
     justify-content: center;
     align-items: center;
 }
+
+/* área login */
 
 .login {
     display: flex;
@@ -33,7 +35,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    
     gap: 5px;
 }
 
@@ -49,23 +51,22 @@
     font-size: 1em;
 }
 
-/* FORMULARIO */
-
+/* FORMULÁRIO */
 form {
     display: flex;
     flex-direction: column;
+
     gap: 20px;
 }
 
 /* CAMPOS */
-
 .campo {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.campo-label {
+.campo label {
     color: var(--azul-escuro);
     font-size: 1em;
     font-weight: 700;
@@ -81,12 +82,14 @@ form {
     background-color: var(--branco);
 
     padding: 0 20px;
+
     font-size: 1em;
+
     outline: none;
 }
 
 .campo input::placeholder {
-    color: #000000;
+    color: #00000050;
     font-style: italic;
 }
 
@@ -99,13 +102,12 @@ form {
 .botao-olho {
     position: absolute;
 
-    right: 3%;
+    right: 20px;
     top: 50%;
-
     transform: translateY(-50%);
 
     border: none;
-    background-color: transparent;
+    background: transparent;
 
     cursor: pointer;
     color: #00000050;
@@ -128,8 +130,6 @@ form {
     font-size: 1.2em;
     font-weight: 700;
 
-    cursor: pointer;
-
     text-transform: uppercase;
 
     transition: transform 0.2s;
@@ -141,7 +141,7 @@ form {
     transform: translateY(-3px);
 }
 
-/* BOTÃO GOOGLE */
+/* BOTAO GOOGLE */
 
 .botao-google {
     width: 100%;
