@@ -31,6 +31,21 @@ btnSenha.addEventListener("click", function() {
     //     campoSenha.type = "password";
     // }
 
-    campoSenha.type = campoSenha.type == "password" ? "text" : "password"
-    
+    campoSenha.type = campoSenha.type == "password" ? "text" : "password"  
+})
+
+// let opção = 2
+
+// switch(opção) {
+//     case 1: eewe1
+//     break;
+// }
+
+//ESTRUTURA DE REPETIÇÃO
+let frutas = ["Maça", "Banana", "Acerola", "Uva"]
+
+console.log(frutas);
+
+frutas.forEach(function(nome) {
+    console.log("Nome: "+ frutas);gyi
 })
